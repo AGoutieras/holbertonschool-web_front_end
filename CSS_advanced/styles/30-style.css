@@ -2,7 +2,9 @@
 /*# sourceMappingURL=normalize.min.css.map */
 
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -147,6 +149,11 @@ h6 {
   height: 0.2rem;
 }
 
+.nav .nav-item:hover .nav-link::before {
+  background-color: var(--color-primary);
+  width: 100%;
+}
+
 ul.row {
   margin: 0;
   padding: 0;
@@ -205,17 +212,17 @@ ul.row {
   --button-color: var(--color-white);
 }
 
-.card-service .card-title {
+.card-services .card-title {
   margin: 0;
 }
 
-.card-service a {
+.card-services a {
   display: block;
   padding: 2rem;
   background-color: var(--color-light-grey);
 }
 
-.card-service a:hover {
+.card-services a:hover {
   color: var(--color-white);
   background-color: var(--color-primary);
   text-decoration: none;
@@ -242,7 +249,7 @@ ul.row {
   overflow: hidden;
 }
 
-.card-work .card-image {
+.card-work .card-image img{
   height: 30rem;
   width: 100%;
   object-fit: cover;
@@ -348,7 +355,7 @@ ul.row {
   --nav-item-font-family: var(--font-family-title);
   --nav-item-font-weight: var(--font-weight-bold);
   --nav-item-font-size: var(--font-size-medium);
-  --nav-item-letter-spacing: 0.04em;
+  --nav-item-letter-spacing: 0.04rem;
   --nav-item-display: inline-block;
   --nav-item-margin: 0 0 3rem 0;
   --nav-item-link-hover: var(--color-white);
